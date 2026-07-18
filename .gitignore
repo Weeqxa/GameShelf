@@ -32,5 +32,19 @@ build/
 ### VS Code ###
 .vscode/
 
-
+### Hide password ###
 .env
+
+
+### Instruction for me ###
+.instruction
+.controller
+.service_instr
+.repository
+.entity_instr
+.dto_instr
+.mapper
+.security
+.config_instr
+.exception_instr
+.util_instr
