@@ -37,14 +37,9 @@ build/
 
 
 ### Instruction for me ###
-.instruction
-.controller
-.service_instr
-.repository
-.entity_instr
-.dto_instr
-.mapper
 .security
-.config_instr
+.mapper
 .exception_instr
 .util_instr
+
+.instruction
