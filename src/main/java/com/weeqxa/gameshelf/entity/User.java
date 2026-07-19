@@ -32,6 +32,11 @@ public class User {
     private LocalDateTime createdAt;
 
 
+    @PrePersist
+    private void setCreatedAt() {
+        this.createdAt = LocalDateTime.now();
+    }
+
     public User(String email, String password, String username) {
         this.email = email;
         this.password = password;
