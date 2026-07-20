@@ -1,9 +1,12 @@
 package com.weeqxa.gameshelf.service;
 
+import com.weeqxa.gameshelf.dto.LoginRequest;
+import com.weeqxa.gameshelf.dto.LoginResponse;
 import com.weeqxa.gameshelf.dto.RegisterRequest;
 import com.weeqxa.gameshelf.dto.RegisterResponse;
 import com.weeqxa.gameshelf.entity.User;
 import com.weeqxa.gameshelf.repository.UserRepository;
+import com.weeqxa.gameshelf.security.JwtService;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -12,11 +15,13 @@ public class AuthService {
 
     private final UserRepository userRepository;
     private final PasswordEncoder passwordEncoder;
+    private final JwtService jwtService;
 
 
-    public AuthService(UserRepository userRepository, PasswordEncoder passwordEncoder) {
+    public AuthService(UserRepository userRepository, PasswordEncoder passwordEncoder, JwtService jwtService) {
         this.userRepository = userRepository;
         this.passwordEncoder = passwordEncoder;
+        this.jwtService = jwtService;
     }
 
 
@@ -32,5 +37,21 @@ public class AuthService {
 
         return new RegisterResponse("User registered successfully");
     }
+
+
+    public LoginResponse login(LoginRequest request) {
+
+        User user = userRepository.findByEmail(request.getEmail()).orElseThrow(() -> new IllegalArgumentException("User with this email not found"));
+
+        if (!passwordEncoder.matches(request.getPassword(), user.getPassword())){
+            throw new IllegalArgumentException("Wrong password");
+        }
+
+        return new LoginResponse("User successfully logged in", jwtService.generateToken(user));
+    }
+
+
+
+
 
 }
