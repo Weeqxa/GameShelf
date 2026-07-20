@@ -18,7 +18,6 @@ public class RegisterRequest {
 
     @NotBlank(message = "Password is required")
     @Size(min = 8, max = 20)
-
     private String password;
 
     @NotBlank(message = "Username is required")
