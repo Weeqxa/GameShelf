@@ -1,6 +1,8 @@
 package com.weeqxa.gameshelf.controller;
 
 
+import com.weeqxa.gameshelf.dto.LoginRequest;
+import com.weeqxa.gameshelf.dto.LoginResponse;
 import com.weeqxa.gameshelf.dto.RegisterRequest;
 import com.weeqxa.gameshelf.dto.RegisterResponse;
 import com.weeqxa.gameshelf.service.AuthService;
@@ -24,6 +26,13 @@ public class AuthController {
         RegisterResponse response = authService.register(request);
 
         return ResponseEntity.status(HttpStatus.CREATED).body(response);
+    }
+
+    @PostMapping("/login")
+    public ResponseEntity<LoginResponse> login(@Valid @RequestBody LoginRequest request) {
+        LoginResponse response = authService.login(request);
+
+        return ResponseEntity.ok(response);
     }
 
 
