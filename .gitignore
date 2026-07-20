@@ -37,9 +37,4 @@ build/
 
 
 ### Instruction for me ###
-.security
-.mapper
-.exception_instr
-.util_instr
-
 .instruction
