@@ -1,9 +1,9 @@
 package com.weeqxa.gameshelf.service;
 
-import com.weeqxa.gameshelf.dto.LoginRequest;
-import com.weeqxa.gameshelf.dto.LoginResponse;
-import com.weeqxa.gameshelf.dto.RegisterRequest;
-import com.weeqxa.gameshelf.dto.RegisterResponse;
+import com.weeqxa.gameshelf.dto.login.LoginRequest;
+import com.weeqxa.gameshelf.dto.login.LoginResponse;
+import com.weeqxa.gameshelf.dto.register.RegisterRequest;
+import com.weeqxa.gameshelf.dto.register.RegisterResponse;
 import com.weeqxa.gameshelf.entity.User;
 import com.weeqxa.gameshelf.repository.UserRepository;
 import com.weeqxa.gameshelf.security.JwtService;

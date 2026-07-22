@@ -1,4 +1,4 @@
-package com.weeqxa.gameshelf.dto;
+package com.weeqxa.gameshelf.dto.register;
 
 
 import lombok.AllArgsConstructor;
@@ -6,9 +6,8 @@ import lombok.Getter;
 
 @Getter
 @AllArgsConstructor
-public class LoginResponse {
+public class RegisterResponse {
 
     private String message;
 
-    private String token;
 }

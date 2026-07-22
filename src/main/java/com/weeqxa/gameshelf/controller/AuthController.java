@@ -1,10 +1,10 @@
 package com.weeqxa.gameshelf.controller;
 
 
-import com.weeqxa.gameshelf.dto.LoginRequest;
-import com.weeqxa.gameshelf.dto.LoginResponse;
-import com.weeqxa.gameshelf.dto.RegisterRequest;
-import com.weeqxa.gameshelf.dto.RegisterResponse;
+import com.weeqxa.gameshelf.dto.login.LoginRequest;
+import com.weeqxa.gameshelf.dto.login.LoginResponse;
+import com.weeqxa.gameshelf.dto.register.RegisterRequest;
+import com.weeqxa.gameshelf.dto.register.RegisterResponse;
 import com.weeqxa.gameshelf.service.AuthService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
