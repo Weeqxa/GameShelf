@@ -1,7 +1,7 @@
 package com.weeqxa.gameshelf.controller;
 
 
-import com.weeqxa.gameshelf.dto.GamesResponseDto;
+import com.weeqxa.gameshelf.dto.games.GamesResponseDto;
 import com.weeqxa.gameshelf.service.GameService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
