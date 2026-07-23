@@ -1,4 +1,4 @@
-package com.weeqxa.gameshelf.dto;
+package com.weeqxa.gameshelf.dto.games;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
